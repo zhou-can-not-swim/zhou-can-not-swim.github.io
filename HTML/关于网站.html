@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>关于网站</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+body{
+    background-color: rgb(219,219,219);
+}
+        li {
+            list-style: none;
+        }
+
+        .leftbian {
+            float: left;
+            width: 200px;
+            height: 340px;
+            margin-left: 80px;
+            margin-top: 25px;
+        }
+
+        li {
+            display: block;
+            float: left;
+            width: 200px;
+            height: 70px;
+            background-color: rgba(0, 0, 0, 0.14);
+            text-indent: 50px;
+            line-height: 70px;
+
+        }
+      
+        ul>img {
+            display: none;
+            width: 200px;
+
+        }
+
+        li:hover {
+            cursor: pointer;
+            background-color: rgb(207, 122, 207);
+        }
+
+        .box div {
+            display: none;
+            position: absolute;
+            margin-top: 25px;
+            left: 300px;
+            width: 800px;
+
+            background-color: rgb(255, 255, 255);
+        }
+
+        .box img {
+            display: block;
+            width: 600px;
+            margin: 20px auto;
+        }
+
+        p {
+            text-indent: 2em;
+            margin-top: 10px;
+            background-color: rgb(86, 168, 193);
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <ul class="leftbian">
+        <li style="background-color:pink">简单介绍</li>
+        <li>上课知识</li>
+        <li>自学知识</li>
+        <img src="../图片/关于网站/R-C.jfif" alt="" width="200px" style="display:block">
+        <img src="../图片/关于网站/简简单单.jpg" alt="">
+        <img src="../图片/关于网站/毫无想法.jpg" alt="">
+    </ul>
+
+    <div class="box">
+        <div class="first" style="display:block">
+
+            <p>这是刚开始登录的界面，输入用户名和密码就可以进行相关的跳转</p>
+            <img src="../图片/关于网站/简单介绍/登录主界面.png" alt="">
+
+            <p>登陆之后见到的就是这个主界面</p>
+            <img src="../图片/关于网站/简单介绍/登录后界面看到的界面.png" alt="">
+
+            <p>这个是关于我的个人介绍</p>
+            <img src="../图片/关于网站/简单介绍/关于个人介绍.png" alt="">
+
+            <p>一些网站视频资源全部都在这里，还有一些讨论的社区提供学习</p>
+            <img src="../图片/关于网站/简单介绍/学习方法.png" alt="">
+
+            <p>提供了更换背景的功能，觉得当前的背景不好看的话可以进行更改</p>
+            <img src="../图片/关于网站/简单介绍/背景换肤.png" alt="">
+
+        </div>
+        <div class="second">
+            <p>用到了float浮动</p>
+            <img src="../图片/关于网站/老师/1.png" alt="">
+
+            <p>用到了盒子模型中的padding,margin,border</p>
+            <img src="../图片/关于网站/老师/2.png" alt="">
+
+            <p>用到了html基础</p>
+            <img src="../图片/关于网站/老师/3.png" alt="">
+
+            <p>用到了position定位</p>
+            <img src="../图片/关于网站/老师/4.png" alt="">
+        </div>
+        <div class="last">
+            <img src="../图片/关于网站/自学/轮播倒计时.png" alt="">
+
+            <p>轮播图</p>
+            <img src="../图片/关于网站/自学/轮播1.png" alt="">
+            <img src="../图片/关于网站/自学/轮播2.png" alt="">
+
+
+            <p>倒计时函数</p>
+            <img src="../图片/关于网站/自学/倒计时.png" alt="">
+
+           
+        </div>
+
+    </div>
+    <script>
+        var li = document.querySelectorAll("li");
+        var img = document.querySelector("ul").querySelectorAll('img');
+        var div = document.querySelector(".box").querySelectorAll('div');
+
+        for (var i = 0; i < li.length; i++) {
+            li[i].setAttribute('index', i);
+
+            li[i].addEventListener('click', function () {
+                for (var i = 0; i < li.length; i++) {
+                    li[i].style.backgroundColor = "";
+                    img[i].style.display = "";
+                    div[i].style.display = "";
+
+                }
+                // console.log(this.getAttribute("index"));
+
+
+                this.style.backgroundColor = "pink";
+                img[this.getAttribute("index")].style.display = "block";
+                div[this.getAttribute("index")].style.display = "block";
+
+
+            })
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>

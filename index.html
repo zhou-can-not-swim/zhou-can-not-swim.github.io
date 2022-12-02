@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录界面</title>
+    <link rel="shortcut icon" type="image/x-icon" href="图片/僧人.jpg">
+
+    <script src="js/login.js"></script>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+
+            color: #fff;
+        }
+
+        body {
+            background-image: linear-gradient(to right, rgb(100, 191, 228), rgb(255, 255, 255), rgb(198, 198, 198), rgb(199, 212, 215));
+
+        }
+
+        .center {
+            width: 250px;
+            height: 375px;
+            background-color: rgba(0, 0, 0, 0.2);
+
+            margin: 100px auto;
+            border-top: 1px solid transparent;
+
+            box-shadow: 5px 6px 10px -4px rgb(87, 150, 198);
+
+            z-index: 99;
+            border-radius: 10px;
+
+
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 40px;
+
+            background: linear-gradient(to bottom right, rgb(172, 74, 74), rgb(42, 42, 142), rgb(134, 134, 62));
+
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+
+            z-index: 99;
+
+
+        }
+
+        input {
+            margin-bottom: 45px;
+            width: 200px;
+            height: 35px;
+
+            border: 0px solid transparent;
+            margin-left: 25px;
+            padding-left: 10px;
+
+            font-size: 15px;
+            letter-spacing: 8px;
+
+            outline: none;
+            background-color: rgba(0, 0, 0, 0);
+            border-bottom: 1px solid black;
+
+            z-index: 99;
+            color: rgb(255, 255, 255);
+
+        }
+
+        form {
+            margin-top: 50px;
+
+
+            z-index: 99;
+
+        }
+
+        button {
+            color: black;
+            margin-left: 25px;
+            width: 200px;
+            height: 30px;
+            font-size: 15px;
+            border: 0;
+
+            letter-spacing: 30px;
+            padding-left: 20px;
+            box-shadow: 0px 5px 8px -4px rgb(127, 123, 123);
+            border-radius: 2px;
+
+            background-image: linear-gradient(to bottom right, rgb(100, 191, 228), rgb(100, 134, 228));
+
+
+        }
+
+        button:hover {
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+
+        }
+
+        /* 对背景wel设置 */
+        .bgf {
+            height: 55px;
+            font-weight: 700;
+            font-size: 50px;
+            text-align: center;
+
+        }
+
+        .bgf span {
+            background-image: linear-gradient(to right, rgb(46, 176, 163), rgb(163, 73, 136));
+
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+
+        p {
+            display: none;
+            margin: 300px auto;
+            text-align: center;
+            font-size: 30px;
+
+            color: rgb(60, 57, 57);
+
+
+        }
+
+        .put {
+            position: absolute;
+            top: 20px;
+            left: 100px;
+            width: 150px;
+            height: 70px;
+
+            background-color: rgb(133, 66, 66);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="bgf">
+        <span>welcome</span>
+        <span>my</span>
+        <span>private</span>
+        <span>web</span>
+    </div>
+    <div class="center">
+        <h1>Login</h1>
+        <form>
+            <input type="text" name="name" placeholder="用户名" maxlength="3" value="">
+            <input type="password" name="pwd" placeholder="密码" maxlength="6" value="">
+            <button type="button" value="登录">登录</button>
+        </form>
+    </div>
+    <p></p>
+
+</body>
+
+</html>

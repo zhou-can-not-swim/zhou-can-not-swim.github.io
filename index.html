@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录</title>
+    <link rel="shortcut icon" type="image/x-icon" href="图片/僧人.jpg">
+    <script src="js/login.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 大的背景 */
+        body {
+            width: 100vw;
+            height: 100vh;
+            background-image: url(图片/登录/body图片.jfif);
+            background-repeat: no-repeat;
+        }
+
+        .bigbox {
+            width: 600px;
+            height: 410px;
+
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -300px;
+            margin-left: -300px;
+
+
+        }
+
+        .box {
+            width: 598px;
+            height: 398px;
+            border: 1px solid transparent;
+            margin-top: 4px;
+
+            background-color: rgba(0, 0, 0, 0.3);
+            box-shadow: 5px 6px 6px -7px rgb(10, 157, 235);
+        }
+
+        .left,
+        .right {
+            width: 50%;
+            /* border-right: 1px solid red; */
+            float: left;
+
+        }
+
+
+
+        h3 {
+            color: rgb(49, 99, 186);
+            text-align: center;
+            margin-top: 50px;
+
+        }
+
+        form {
+            margin-top: 40px;
+
+
+        }
+
+        h3 {
+            font-size: 30px;
+        }
+
+        input {
+            display: block;
+            color: aliceblue;
+            outline: none;
+            width: 190px;
+            height: 28px;
+            letter-spacing: 10px;
+
+            /* 字体设置 */
+            font-size: 15px;
+
+            /* 边框设置 */
+            border: 0;
+            background-color: rgba(0, 0, 0, 0);
+            border-bottom: 1px solid red;
+            /* 上下边距设置 */
+
+
+        }
+
+        .left input {
+            margin: 32px auto;
+
+        }
+
+        .right input {
+            margin: 16px auto;
+        }
+
+        button {
+            width: 30px;
+            height: 30px;
+            display: block;
+            margin: 0px auto;
+            margin-top: 30px;
+            border-radius: 50%;
+            border: 0;
+            text-align: center;
+
+
+            background-image: linear-gradient(to bottom right, rgb(9, 53, 247), rgb(69, 62, 176), rgb(71, 81, 133));
+
+            transition: all 0.3s linear;
+
+        }
+
+        button:hover {
+            width: 150px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        p {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 15px;
+
+
+        }
+
+        span {
+            color: rgb(175, 66, 200);
+        }
+
+        span:hover {
+            cursor: pointer;
+        }
+
+        .toper {
+            width: 300px;
+            /* 410-255 */
+            height: 155px;
+            background-image: url(图片/登录/移动图片.png);
+            position: absolute;
+            left: 300px;
+            z-index: 99;
+            padding-top: 255px;
+
+
+        }
+
+        .have,
+        .sub {
+            margin-top: 0;
+        }
+
+        .have {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bigbox">
+        <div class="toper">
+            <p class="have">已有账号<span>去登录</span></p>
+        </div>
+        <div class="box">
+            <div class="left">
+                <h3>Login</h3>
+                <form action="">
+                    <input type="text" placeholder="用户名" maxlength="3">
+                    <input type="password" placeholder="密码" maxlength="6">
+                    <button type="button">登录</button>
+                    <p>没有账号?<span>注册一个</span></p>
+                </form>
+
+            </div>
+            <div class="right">
+                <h3>Register</h3>
+                <form action="">
+                    <input type="text" placeholder="用户名">
+                    <input type="text" placeholder="电话号码">
+                    <input type="text" placeholder="邮箱">
+                    <input type="text" placeholder="新密码">
+                    <input type="submit" value="注册" style="cursor:pointer">
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+
+        var span = document.querySelector(".left").querySelector("span");
+        var topspan = document.querySelector(".toper").querySelector("span");
+
+        var toper = document.querySelector(".toper");
+        var have = document.querySelector(".have");
+        var step;
+        function annimate(obj, target) {
+            clearInterval(obj.timer);
+            obj.timer = setInterval(function () {
+                if (obj.offsetLeft == target) {
+                    clearInterval();
+                } else {
+                    obj.style.left = obj.offsetLeft + step + "px";
+                }
+            }, 1)
+        }
+        
+        console.log(span);
+
+        console.log(toper.style.top);
+        console.log(have.style.display);
+
+        span.addEventListener('click', function () {
+            step=-5;
+            annimate(toper, 0);
+            have.style.display = "block";
+        })
+        topspan.addEventListener('click', function () {
+            step=5;
+            annimate(toper, 300);
+            have.style.display = "none";
+            span.style.display = "block";
+        })
+
+    </script>
+</body>
+
+</html>

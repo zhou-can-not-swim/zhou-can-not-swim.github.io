@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>首页</title>
+    
+    <link rel="shortcut icon" type="image/x-icon" href="../图片/僧人.jpg">
+    <link rel="stylesheet" href="../css/首页.css">
+
+   
+    <link rel="stylesheet" href="../css/首页change.css">
+    <script src="../js/首页日期.js" type="text/javascript"></script>
+    <script src="../js/首页轮播图.js" type="text/javascript"></script>
+    <script src="../js/首页change.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+    <!-- 首页导航栏 &  导航栏里面的的小标题链接 -->
+    <div class="nav">
+        <a href="个人介绍.html">个人介绍</a>
+        <a href="学习小屋.html">学习小屋</a>
+        <a href="../音乐设计/音乐人物薛之谦.html">音乐欣赏</a>
+        <a href="javascript:;" class="change">背景换肤</a>
+        <a href="关于网站.html" class="last">关于网站</a>
+    </div>
+    <!-- 背景图片 -->
+    
+    <div class="bgi">
+        <div class="sanjiao"></div>
+        <img src="../图片test/1.jfif" alt="" width="70px" height="50px">
+        <img src="../图片test/2.jfif" alt=""  width="70px" height="50px">
+        <img src="../图片test/3.jpg" alt=""  width="70px" height="50px">
+        <img src="../图片test/4.jfif" alt=""  width="70px" height="50px">
+        <img src="../图片test/5.jfif" alt=""  width="70px" height="50px">
+        <img src="../图片test/6.jfif" alt=""  width="70px" height="50px">
+        <img src="../图片test/7.jpg" alt=""  width="70px" height="50px">
+    </div>
+    <!-- 首页中心主体介绍  -->
+
+    <div class="center">
+        <div class="left">
+            <img src="../图片/首页/我的头像.jpg" alt="" width="100px">
+            <table width="200px" height="200px">
+                <tr>
+                    <td>姓名：</td>
+                    <td>zqy</td>
+
+                </tr>
+                <tr>
+                    <td>班级：</td>
+                    <td>息211</td>
+
+                </tr>
+                <tr>
+                    <td>学院：</td>
+                    <td>管理科学与工程</td>
+
+                </tr>
+            </table>
+        </div>
+        <div class="right">
+            <div class="top">
+                <div class="arrowL">&lt;</div>
+                <div class="arrowR">&gt;</div>
+                <script>
+                    var arrowL = document.querySelector('.arrowL');
+                    var arrowR = document.querySelector('.arrowR');
+                    arrowR.addEventListener('selectstart', function (e) {
+                        e.preventDefault();
+                    })
+                    arrowL.addEventListener('selectstart', function (e) {
+                        e.preventDefault();
+                    })
+
+                </script>
+                <div></div>
+                <ul>
+                    <li><img src="../图片test/l1.jpg" alt="" width="530px" height="250px"></li>
+                    <li><img src="../图片test/l2.png" alt="" width="530px" height="250px"></li>
+                    <li><img src="../图片test/l3.jpg" alt="" width="530px" height="250px"></li>
+                    <li><img src="../图片test/l4.jpg" alt="" width="530px" height="250px"></li>
+                    <li><img src="../图片test/l5.jfif" alt="" width="530px" height="250px"></li>
+                </ul>
+                <ol class="circle">
+
+
+                </ol>
+            
+            </div>
+            <div class="buttom">
+                <p>这一天只剩下：</p>
+                <span class="hour">1</span>
+                <span class="minute">2</span>
+                <span class="second last">3</span>
+            </div>
+
+        </div>
+
+    </div>
+    <div class="black"></div>
+
+
+    </div>
+</body>
+
+</html>

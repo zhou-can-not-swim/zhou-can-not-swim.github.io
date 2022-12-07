@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+
+        }
+
+        li {
+            list-style: none;
+        }
+
+        body {
+            background-image: url(音乐图片/背景/雨.jpg);
+            background-size: cover;
+            /* background-repeat: no-repeat; */
+            /* background-position: center; */
+            /* background-size: contain; */
+            /* background-size: contain; */
+        }
+
+        /* 设置大小,position布局 */
+        .backbox {
+            position: relative;
+            width: 1200px;
+            height: 600px;
+            /* background-color: rgb(37, 86, 128); */
+            margin: 110px auto;
+            margin-bottom: 0;
+            border-top: 1px solid transparent;
+
+            /* z-index:9; */
+        }
+
+        .font-musicform {
+            position: absolute;
+            left: 0;
+            width: 66%;
+            /* height: 100%; */
+
+            /* background-color: aliceblue; */
+
+            margin: 50px 0;
+        }
+
+        .font-musicform .font-toper {
+            height: 90px;
+            margin-bottom: 30px;
+            /* border:1px solid red; */
+        }
+
+        .font-musicform .shuxian {
+            display: inline-block;
+            width: 15px;
+            height: 80px;
+            margin-right: 20px;
+
+            border: 1px solid rgb(255, 255, 255);
+            background-color: rgb(159, 143, 92);
+        }
+
+        .font-musicform .music {
+            display: inline-block;
+            font-size: 70px;
+            height: 500px;
+            /* background-color: black; */
+        }
+
+        .font-musicform .musicform {
+            height: 400px;
+            background-color: rgba(0, 0, 0, 0.3);
+        }
+
+        .font-musicform .musicform h3 {
+            font-size: 30px;
+            margin: 20px 0;
+            margin-left: 50px;
+            color: #fff;
+            /* background-color: red; */
+        }
+
+        /* 右边人物图像以及信息 */
+        .character-info {
+            position: absolute;
+            right: 0;
+            top: 200px;
+            width: 250px;
+            height: 400px;
+            background-color: rgba(66, 69, 42, 0.3);
+
+        }
+
+        .character-info img {
+            float: left;
+            position: absolute;
+            left: -207px;
+            top: -200px;
+
+            border: 2px solid rgb(50, 88, 95);
+        }
+
+        .character-info .font-right {
+            position: relative;
+            left: 150px;
+            width: 100px;
+            height: 200px;
+
+            background-color: rgb(81, 119, 176);
+        }
+
+        .character-info .font-right .shu-font {
+
+            width: 20px;
+            font-size: 20px;
+            word-wrap: break-word;
+            letter-spacing: 20px;
+            background-color: rgba(0, 0, 0, 0);
+
+            margin: 0 5px 0 70px;
+
+        }
+
+        .character-info .font-right .singer {
+            font-size: 30px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            /* background-color: red; */
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        /* 榜单设计 */
+        .main-music {
+            width: 700px;
+            height: 300px;
+            margin-left: 50px;
+            /* background-color: #fff; */
+            border-radius: 5px;
+        }
+
+        .main-music li {
+            font-size: 18px;
+            height: 20px;
+            margin: 10px 5px;
+            margin-left: 30px;
+        }
+
+        .font-musicform .musicform .left-music {
+            color: #fff;
+            float: left;
+            width: 400px;
+            height: 300px;
+            border-right: 1px solid rgb(92, 128, 159);
+        }
+
+        .font-musicform .musicform .left-music li img {
+            float: right;
+            width: 20px;
+            height: 20px;
+            border-radius: 10px;
+
+        }
+
+        .font-musicform .musicform .right-music {
+            float: left;
+            width: 299px;
+
+        }
+
+        .font-musicform .musicform .right-music h5 {
+            font-size: 20px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .font-musicform .musicform .right-music li {
+            height: 22px;
+            border: 1px solid transparent;
+            vertical-align: super;
+            border-radius: 10px;
+            padding: 5px;
+            /* li的样式 */
+            /* list-style: disc; */
+            list-style-position: inside;
+
+        }
+
+        .font-musicform .musicform .right-music .change {
+            border-color: #fff;
+            list-style: disc;
+            list-style-position: inside;
+        }
+
+        .font-musicform .musicform .right-music li:hover {
+            list-style: disc;
+            list-style-position: inside;
+
+            border: 1px solid #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="backbox">
+        <ul class="font-musicform">
+            <li class="font-toper">
+                <div class="shuxian"></div>
+                <div class="music">Music</div>
+            </li>
+            <li class="musicform">
+                <h3>榜单</h3>
+                <div class="main-music">
+
+                    <ul class="left-music">
+                        <li>初学者<img src="../音乐设计/音乐图片/小按钮/关闭.png" alt=""></li>
+                        <li>刚刚好<img src="../音乐设计/音乐图片/小按钮/关闭.png" alt=""></li>
+                        <li>花儿与少年<img src="../音乐设计/音乐图片/小按钮/关闭.png" alt=""></li>
+                        <li>绅士<img src="../音乐设计/音乐图片/小按钮/关闭.png" alt=""></li>
+                        <li>我好像在哪见过你<img src="../音乐设计/音乐图片/小按钮/关闭.png" alt=""></li>
+                        <li>下雨了<img src="../音乐设计/音乐图片/小按钮/关闭.png" alt=""></li>
+                        <li>小孩<img src="../音乐设计/音乐图片/小按钮/关闭.png" alt=""></li>
+                        <li>演员<img src="../音乐设计/音乐图片/小按钮/关闭.png" alt=""></li>
+                        <li>一半<img src="../音乐设计/音乐图片/小按钮/关闭.png" alt=""></li>
+                    </ul>
+                    <ul style="display:none">
+                        <li>怪咖<img src="../音乐设计/音乐图片/小按钮/关闭.png" alt=""></li>
+                        <li>狐狸<img src="../音乐设计/音乐图片/小按钮/关闭.png" alt=""></li>
+                        <li>摩天大楼<img src="../音乐设计/音乐图片/小按钮/关闭.png" alt=""></li>
+                        <li>那是你离开了北京的生活<img src="../音乐设计/音乐图片/小按钮/关闭.png" alt=""></li>
+                        <li>肆无忌惮<img src="../音乐设计/音乐图片/小按钮/关闭.png" alt=""></li>
+                        <li>天份<img src="../音乐设计/音乐图片/小按钮/关闭.png" alt=""></li>
+                        <li>违背的青春<img src="../音乐设计/音乐图片/小按钮/关闭.png" alt=""></li>
+                        <li>哑巴<img src="../音乐设计/音乐图片/小按钮/关闭.png" alt=""></li>
+                        <li>最好<img src="../音乐设计/音乐图片/小按钮/关闭.png" alt=""></li>
+                    </ul>
+                    <ul style="display:none">
+                        <li>潮流季<img src="../音乐设计/音乐图片/小按钮/关闭.png" alt=""></li>
+                        <li>丑八怪<img src="../音乐设计/音乐图片/小按钮/关闭.png" alt=""></li>
+                        <li>等我回家<img src="../音乐设计/音乐图片/小按钮/关闭.png" alt=""></li>
+                        <li>方圆几里<img src="../音乐设计/音乐图片/小按钮/关闭.png" alt=""></li>
+                        <li>你还要我怎样<img src="../音乐设计/音乐图片/小按钮/关闭.png" alt=""></li>
+                        <li>其实<img src="../音乐设计/音乐图片/小按钮/关闭.png" alt=""></li>
+                        <li>我想起你了<img src="../音乐设计/音乐图片/小按钮/关闭.png" alt=""></li>
+                        <li>意外<img src="../音乐设计/音乐图片/小按钮/关闭.png" alt=""></li>
+                        <li>有没有<img src="../音乐设计/音乐图片/小按钮/关闭.png" alt=""></li>
+                    </ul>
+                    <ul class="right-music">
+                        <h5>Albums</h5>
+                        <!-- 默认为第一个 -->
+                        <li class="change">初学者</li>
+                        <li>怪咖</li>
+                        <li>意外</li>
+                    </ul>
+                </div>
+                <div class="music-library">
+                    <audio src="../音乐设计/音乐资源/薛之谦专辑/初学者/薛之谦 - 初学者.mp3"></audio>
+                    <audio src="../音乐设计/音乐资源/薛之谦专辑/初学者/薛之谦 - 刚刚好.mp3"></audio>
+                    <audio src="../音乐设计/音乐资源/薛之谦专辑/初学者/薛之谦 - 花儿和少年.mp3"></audio>
+                    <audio src="../音乐设计/音乐资源/薛之谦专辑/初学者/薛之谦 - 绅士.mp3"></audio>
+                    <audio src="../音乐设计/音乐资源/薛之谦专辑/初学者/薛之谦 - 我好像在哪见过你.mp3"></audio>
+                    <audio src="../音乐设计/音乐资源/薛之谦专辑/初学者/薛之谦 - 下雨了.mp3"></audio>
+                    <audio src="../音乐设计/音乐资源/薛之谦专辑/初学者/薛之谦 - 小孩.mp3"></audio>
+                    <audio src="../音乐设计/音乐资源/薛之谦专辑/初学者/薛之谦 - 演员.mp3"></audio>
+                    <audio src="../音乐设计/音乐资源/薛之谦专辑/初学者/薛之谦 - 一半.mp3"></audio>
+
+                    <audio src="../音乐设计/音乐资源/薛之谦专辑/怪咖/薛之谦 - 怪咖.mp3"></audio>
+                    <audio src="../音乐设计/音乐资源/薛之谦专辑/怪咖/薛之谦 - 狐狸.mp3 "></audio>
+                    <audio src="../音乐设计/音乐资源/薛之谦专辑/怪咖/薛之谦 - 摩天大楼.mp3 "></audio>
+                    <audio src="../音乐设计/音乐资源/薛之谦专辑/怪咖/薛之谦 - 那是你离开了北京的生活.mp3 "></audio>
+                    <audio src="../音乐设计/音乐资源/薛之谦专辑/怪咖/薛之谦 - 肆无忌惮.mp3 "></audio>
+                    <audio src="../音乐设计/音乐资源/薛之谦专辑/怪咖/薛之谦 - 天份.mp3 "></audio>
+                    <audio src="../音乐设计/音乐资源/薛之谦专辑/怪咖/薛之谦 - 违背的青春.mp3 "></audio>
+                    <audio src="../音乐设计/音乐资源/薛之谦专辑/怪咖/薛之谦 - 哑巴.mp3 "></audio>
+                    <audio src="../音乐设计/音乐资源/薛之谦专辑/怪咖/薛之谦 - 最好.mp3 "></audio>
+
+                    <audio src="../音乐设计/音乐资源/薛之谦专辑/意外/薛之谦 - 潮流季.mp3"></audio>
+                    <audio src="../音乐设计/音乐资源/薛之谦专辑/意外/薛之谦 - 丑八怪.mp3"></audio>
+                    <audio src="../音乐设计/音乐资源/薛之谦专辑/意外/薛之谦 - 等我回家.mp3"></audio>
+                    <audio src="../音乐设计/音乐资源/薛之谦专辑/意外/薛之谦 - 方圆几里.mp3"></audio>
+                    <audio src="../音乐设计/音乐资源/薛之谦专辑/意外/薛之谦 - 你还要我怎样.mp3"></audio>
+                    <audio src="../音乐设计/音乐资源/薛之谦专辑/意外/薛之谦 - 其实.mp3"></audio>
+                    <audio src="../音乐设计/音乐资源/薛之谦专辑/意外/薛之谦 - 我想起你了.mp3"></audio>
+                    <audio src="../音乐设计/音乐资源/薛之谦专辑/意外/薛之谦 - 意外.mp3"></audio>
+                    <audio src="../音乐设计/音乐资源/薛之谦专辑/意外/薛之谦 - 有没有.mp3"></audio>
+
+                </div>
+            </li>
+        </ul>
+
+        <div class="character-info">
+            <img src="音乐图片/薛之谦头像/头像2.png" alt="" width="300px" height="300px">
+            <div class="font-right">
+                <div class="shu-font">歌手资料</div>
+                <p class="singer">singer</p>
+            </div>
+
+            <table>
+                <p>薛之谦(Joker Xue)</p>中国内地著名歌手。</p>
+                <tr>
+                    <td>代表作：</td>
+                    <td>认真的雪、演员、丑八怪</td>
+                </tr>
+                <tr>
+                    <td>成就：</td>
+                    <td>第20届华语榜中榜最受欢迎唱作歌手奖<br>Music Radio年度内地最佳男歌手奖</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    </div>
+    <script>
+        var img = document.querySelector('.main-music').querySelectorAll('img');
+        var audio = document.querySelectorAll('audio');
+
+        // 点击按钮事件
+        for (var i = 0; i < img.length; i++) {
+            //设置自定义属性
+            //设置flag为0，音乐关闭,1音乐开始，1只存在一个
+            img[i].setAttribute('index', i);
+            img[i].setAttribute('flag', 0);
+            // console.log(img[i].getAttribute('index'));
+            img[26].setAttribute('index', 1);
+
+            img[i].addEventListener('click', function () {
+                //图片设置
+                // console.log(this.getAttribute('index'));yes
+
+                if (this.getAttribute('flag') == 0) {
+                    for (var i = 0; i < img.length; i++) {
+                        //对所有的音频、图片进行设置
+                        img[i].setAttribute('flag', 0);
+                        audio[i].pause();
+                        audio.currentTime = 0;//音乐从头播放
+                        img[i].src = "../音乐设计/音乐图片/小按钮/关闭.png";
+                    }
+                    this.setAttribute('flag', 1);
+                    // console.log(this.getAttribute('flag'));
+                    img[this.getAttribute('index')].src = "../音乐设计/音乐图片/小按钮/开始.png";
+                    audio[this.getAttribute('index')].play();
+
+                } else {
+                    for (var i = 0; i < img.length; i++) {
+                        img[i].setAttribute('flag', 0);
+                    }
+                    img[this.getAttribute('index')].src = "../音乐设计/音乐图片/小按钮/关闭.png";
+                    //音频暂停
+                    audio[this.getAttribute('index')].pause();
+
+                }
+
+
+
+            })
+        }
+        //专辑选择
+        var li = document.querySelector('.right-music').querySelectorAll('li');
+        //4个ul，前三个是.left-music display display="none"
+        var ul = document.querySelector('.main-music').querySelectorAll('ul');
+
+        for (var i = 0; i < li.length; i++) {
+            li[i].setAttribute('index', i);
+            li[i].addEventListener('click', function () {
+                for (var i = 0; i < li.length; i++) {
+                    ul[i].style.display = "none";
+                    li[i].className="";
+
+                }
+                //专辑选时对样式的选择
+
+                this.className="change";
+                ul[this.getAttribute('index')].className = "left-music";
+                ul[this.getAttribute('index')].style.display = "block";
+            })
+        }
+
+
+    </script>
+</body>
+
+</html>
